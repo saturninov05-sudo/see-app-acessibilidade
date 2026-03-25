@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!-- saved from url=(0206)file:///C:/Users/ana%20clara/AppData/Local/Packages/5319275A.WhatsAppDesktop_cv1g1gvanyjgm/LocalState/sessions/4AE38DECADC2D26BEDFB78CC133BD3CF50509A61/transfers/2026-12/Comandos%20Iniciais%20App%20SEE.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEE - App de Acessibilidade</title>
+    <link rel="stylesheet" href="./SEE - App de Acessibilidade_files/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a3a5f 0%, #2c5c8c 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+        
+        .logo {
+            font-size: 4.5rem;
+            font-weight: bold;
+            color: #4db8ff;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .slogan {
+            font-size: 1.4rem;
+            color: #cce7ff;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            color: #a3d5ff;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .main-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .action-btn {
+            background: linear-gradient(to right, #4db8ff, #1a8cff);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 24px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        .action-btn:focus {
+            outline: 4px solid #ffcc00;
+            transform: scale(1.02);
+        }
+        
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .action-btn i {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .action-btn.secondary {
+            background: linear-gradient(to right, #36b536, #2a9c2a);
+        }
+        
+        .action-btn.tertiary {
+            background: linear-gradient(to right, #ff9933, #e67300);
+        }
+        
+        .quick-access {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .quick-access h2 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #cce7ff;
+            text-align: center;
+        }
+        
+        .quick-actions {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .quick-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 12px;
+            padding: 20px 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100px;
+            text-align: center;
+        }
+        
+        .quick-btn:focus {
+            outline: 3px solid #ffcc00;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .quick-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .quick-btn i {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        
+        .accessibility-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            padding: 0 10px;
+        }
+        
+        .accessibility-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid #4db8ff;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: #4db8ff;
+            transition: all 0.3s;
+        }
+        
+        .accessibility-btn:focus {
+            outline: 3px solid #ffcc00;
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .accessibility-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+        
+        .btn-label {
+            font-size: 0.7rem;
+            margin-top: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #a3d5ff;
+            font-size: 1rem;
+            padding: 20px 0;
+        }
+        
+        /* Acessibilidade - Alto Contraste */
+        .high-contrast {
+            background: #000000;
+            color: #ffffff;
+        }
+        
+        .high-contrast .action-btn {
+            background: #ffff00;
+            color: #000000;
+        }
+        
+        .high-contrast .action-btn.secondary {
+            background: #00ffff;
+            color: #000000;
+        }
+        
+        .high-contrast .action-btn.tertiary {
+            background: #ff00ff;
+            color: #000000;
+        }
+        
+        .high-contrast .quick-access {
+            background: #000000;
+            border: 2px solid #ffffff;
+        }
+        
+        .high-contrast .quick-btn {
+            background: #333333;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+        }
+        
+        .high-contrast .accessibility-btn {
+            background: #000000;
+            border: 2px solid #ffff00;
+            color: #ffff00;
+        }
+        
+        /* Acessibilidade - Texto Grande */
+        .large-text {
+            font-size: 1.3rem;
+        }
+        
+        .large-text .action-btn {
+            font-size: 1.8rem;
+        }
+        
+        .large-text .quick-btn {
+            font-size: 1.4rem;
+        }
+        
+        .large-text .btn-label {
+            font-size: 0.9rem;
+        }
+        
+        /* Indicador de foco para navegação por teclado */
+        .focus-indicator {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #ffcc00;
+            color: #000;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        
+        /* Animações */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Feedback tátil simulado */
+        .vibration {
+            animation: vibrate 0.3s linear;
+        }
+        
+        @keyframes vibrate {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-2px); }
+            40% { transform: translateX(2px); }
+            60% { transform: translateX(-2px); }
+            80% { transform: translateX(2px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body class="large-text high-contrast">
+    <div class="focus-indicator" id="focus-indicator" style="display: none;">Modo Navegação por Teclado Ativo</div>
+    
+    <div class="container">
+        <header>
+            <div class="logo pulse">SEE</div>
+            <p class="slogan">Mobilidade com Autonomia</p>
+            <p class="description">Navegação acessível no transporte público</p>
+        </header>
+        
+        <main>
+            <div class="main-actions">
+                <button class="action-btn" id="navigate-btn">
+                    <i class="fas fa-route"></i>
+                    Navegar para um Destino
+                </button>
+                <button class="action-btn secondary" id="transport-btn">
+                    <i class="fas fa-bus"></i>
+                    Transporte Próximo
+                </button>
+                <button class="action-btn tertiary" id="assistance-btn">
+                    <i class="fas fa-hands-helping"></i>
+                    Solicitar Assistência
+                </button>
+            </div>
+            
+            <div class="quick-access">
+                <h2>Acesso Rápido</h2>
+                <div class="quick-actions">
+                    <button class="quick-btn" id="favorites-btn">
+                        <i class="fas fa-star"></i>
+                        Favoritos
+                    </button>
+                    <button class="quick-btn" id="history-btn">
+                        <i class="fas fa-history"></i>
+                        Histórico
+                    </button>
+                    <button class="quick-btn" id="alerts-btn">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Alertas
+                    </button>
+                    <button class="quick-btn" id="settings-btn">
+                        <i class="fas fa-cog"></i>
+                        Configurações
+                    </button>
+                </div>
+            </div>
+            
+            <div class="accessibility-controls">
+                <button class="accessibility-btn" id="contrast-btn">
+                    <i class="fas fa-adjust"></i>
+                    <span class="btn-label">Contraste</span>
+                </button>
+                <button class="accessibility-btn" id="text-size-btn">
+                    <i class="fas fa-text-height"></i>
+                    <span class="btn-label">Texto</span>
+                </button>
+                <button class="accessibility-btn" id="vibration-btn">
+                    <i class="fas fa-vibrate"></i>
+                    <span class="btn-label">Vibração</span>
+                </button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>SEE - Tecnologia para Mobilidade Inclusiva</p>
+        </footer>
+    </div>
+
+    <script>
+        // Elementos da interface
+        const contrastBtn = document.getElementById('contrast-btn');
+        const textSizeBtn = document.getElementById('text-size-btn');
+        const vibrationBtn = document.getElementById('vibration-btn');
+        const focusIndicator = document.getElementById('focus-indicator');
+        
+        // Botões principais
+        const navigateBtn = document.getElementById('navigate-btn');
+        const transportBtn = document.getElementById('transport-btn');
+        const assistanceBtn = document.getElementById('assistance-btn');
+        
+        // Botões de acesso rápido
+        const favoritesBtn = document.getElementById('favorites-btn');
+        const historyBtn = document.getElementById('history-btn');
+        const alertsBtn = document.getElementById('alerts-btn');
+        const settingsBtn = document.getElementById('settings-btn');
+        
+        // Estado da vibração
+        let vibrationEnabled = true;
+        
+        // Alternar alto contraste
+        contrastBtn.addEventListener('click', function() {
+            document.body.classList.toggle('high-contrast');
+            provideFeedback('Modo de alto contraste ' + 
+                  (document.body.classList.contains('high-contrast') ? 'ativado' : 'desativado'));
+        });
+        
+        // Alternar tamanho do texto
+        textSizeBtn.addEventListener('click', function() {
+            document.body.classList.toggle('large-text');
+            provideFeedback('Texto ' + 
+                  (document.body.classList.contains('large-text') ? 'aumentado' : 'normal'));
+        });
+        
+        // Alternar vibração
+        vibrationBtn.addEventListener('click', function() {
+            vibrationEnabled = !vibrationEnabled;
+            provideFeedback('Feedback tátil ' + (vibrationEnabled ? 'ativado' : 'desativado'));
+        });
+        
+        // Função para fornecer feedback tátil e visual
+        function provideFeedback(message) {
+            // Feedback visual
+            const feedbackElement = document.createElement('div');
+            feedbackElement.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgba(0, 0, 0, 0.8);
+                color: white;
+                padding: 20px 30px;
+                border-radius: 10px;
+                font-size: 1.2rem;
+                z-index: 1000;
+                text-align: center;
+                max-width: 80%;
+            `;
+            feedbackElement.textContent = message;
+            document.body.appendChild(feedbackElement);
+            
+            // Remover após 2 segundos
+            setTimeout(() => {
+                document.body.removeChild(feedbackElement);
+            }, 2000);
+            
+            // Feedback tátil (simulado com animação)
+            if (vibrationEnabled) {
+                document.body.classList.add('vibration');
+                setTimeout(() => {
+                    document.body.classList.remove('vibration');
+                }, 300);
+            }
+        }
+        
+        // Adicionar feedback para os botões principais
+        const allButtons = [
+            navigateBtn, transportBtn, assistanceBtn, 
+            favoritesBtn, historyBtn, alertsBtn, settingsBtn
+        ];
+        
+        allButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                provideFeedback(this.textContent.trim());
+                // Aqui seria implementada a navegação para a funcionalidade correspondente
+            });
+            
+            button.addEventListener('focus', function() {
+                if (vibrationEnabled) {
+                    this.classList.add('vibration');
+                    setTimeout(() => {
+                        this.classList.remove('vibration');
+                    }, 300);
+                }
+            });
+        });
+        
+        // Detectar navegação por teclado
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Tab') {
+                focusIndicator.style.display = 'block';
+            }
+        });
+        
+        document.addEventListener('mousedown', function() {
+            focusIndicator.style.display = 'none';
+        });
+        
+        // Feedback inicial
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                provideFeedback('Bem-vindo ao SEE. Aplicativo de mobilidade para transporte público.');
+            }, 1000);
+        });
+        
+        // Navegação por teclado adicional
+        document.addEventListener('keydown', function(e) {
+            // Atalhos de teclado para funcionalidades principais
+            if (e.altKey) {
+                switch(e.key) {
+                    case '1':
+                        navigateBtn.click();
+                        break;
+                    case '2':
+                        transportBtn.click();
+                        break;
+                    case '3':
+                        assistanceBtn.click();
+                        break;
+                    case 'c':
+                        contrastBtn.click();
+                        break;
+                    case 't':
+                        textSizeBtn.click();
+                        break;
+                }
+            }
+        });
+    </script>
+
+</body></html>
